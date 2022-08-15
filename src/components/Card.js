@@ -1,17 +1,15 @@
-// Import pictures of 12 classes
-import React, { Component } from 'react'
-import warrior from "";
-import paladin from "";
-import hunter from "";
-import rogue from "";
-import priest from "";
-import shaman from "";
-import mage from "";
-import warlock from "";
-import monk from "";
-import druid from "";
-import demonhunter from "";
-import deathknight from "";
+import warrior from "../images/warrior.jpg";
+import paladin from "../images/paladin.jpg";
+import hunter from "../images/hunter.jpg";
+import rogue from "../images/rogue.jpg";
+import priest from "../images/priest.jpg";
+import shaman from "../images/shaman.jpg";
+import mage from "../images/mage.jpg";
+import warlock from "../images/warlock.jpg";
+import monk from "../images/monk.jpg";
+import druid from "../images/druid.jpg";
+import demonhunter from "../images/demonhunter.jpg";
+import deathknight from "../images/deathknight.jpg";
 import { useState, useEffect } from 'react';
 
 const Card = (props) => {
@@ -46,6 +44,21 @@ const Card = (props) => {
         druid,
         demonhunter,
         deathknight
+    ]);
+
+    const [pickedClass, setPickedClass] = useState([
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
     ]);
 
     let recordSet = [];
@@ -97,10 +110,12 @@ const Card = (props) => {
 
     return valSequence.map((num) => {
         return (
-            <div className=''>
-                <div className=''>
+            <div className='column'>
+                <div className='ui fluid card'>
                     <div className='image'>
                         <img
+                        className="classImg"
+                            alt="CLASS IMG"
                             src={avatar[num]}
                             id={className[num]}
                             onClick={(e) => {
@@ -109,7 +124,7 @@ const Card = (props) => {
                     </div>
                     <div className='content'>
                         <a
-                            className=''
+                            className='header ui centered'
                             id={className[num]}
                             onClick={(e) => {
                                 scorePoint(num);

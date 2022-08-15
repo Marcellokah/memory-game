@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from "react";
 
 const Scoreboard = (props) => {
     const { score, bestScore } = props;
 
     return (
-        <div className=''>
+        <div className='ui centered grid'>
             <div></div>
             <div>
                 <h3>Score: {score}</h3>

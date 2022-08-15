@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import Card from "./Card";
 
-const Gameboard = () => {
+const Gameboard = (props) => {
     return (
-        <div className=''>
+        <div className='ui four column internally celled grid'>
             <Card {...props} />
         </div>
     );
