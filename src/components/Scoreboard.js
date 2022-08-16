@@ -4,8 +4,7 @@ const Scoreboard = (props) => {
     const { score, bestScore } = props;
 
     return (
-        <div className='ui centered grid'>
-            <div></div>
+        <div className='score-container'>
             <div>
                 <h3>Score: {score}</h3>
             </div>

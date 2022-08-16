@@ -110,9 +110,9 @@ const Card = (props) => {
 
     return valSequence.map((num) => {
         return (
-            <div className='column'>
-                <div className='ui fluid card'>
-                    <div className='image'>
+            <div className='card-container'>
+                <div className='card'>
+                    <div className='card-image'>
                         <img
                         className="classImg"
                             alt="CLASS IMG"
@@ -122,9 +122,9 @@ const Card = (props) => {
                                 scorePoint(num);
                             }}></img>
                     </div>
-                    <div className='content'>
+                    <div className='card-content'>
                         <a
-                            className='header ui centered'
+                            className='class-title'
                             id={className[num]}
                             onClick={(e) => {
                                 scorePoint(num);
